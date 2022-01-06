@@ -26,3 +26,14 @@ Simple Linear Regression algorithm is used to predict the value of CO2 emission 
 
 The dataset is sourced from Canada.ca.
 Datasets provide model-specific fuel consumption ratings and estimated carbon dioxide emissions for new light-duty vehicles for retail sale in Canada.
+
+## Data Understanding
+
+* Getting Data
+Using Wget to download the data from IBM Object Storage.
+
+'''
+!wget -O FuelConsumption.csv https://s3-api.us-geo.objectstorage.softlayer.net/cf-courses-data/CognitiveClass/ML0101ENv3/labs/FuelConsumptionCo2.csv
+'''
+
+*Wget is a computer program that retrieves content from web servers.*
