@@ -72,3 +72,19 @@ import numpy as np
 df = pd.read_csv("FuelConsumption.csv")
 df.head()
 ```
+
+## Data Preparation
+
+Descriptive Statistics Exploration 
+
+```
+# To summarize the data
+df.describe()
+```
+
+Features such as Engine-Size, Cylinders, FuelConsumption_Comb and CO2 Emission are explored further.
+
+```
+cdf = df[['ENGINESIZE','CYLINDERS','FUELCONSUMPTION_COMB','CO2EMISSIONS']]
+cdf.head(9)
+```
