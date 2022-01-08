@@ -27,7 +27,7 @@ Simple Linear Regression algorithm is used to predict the value of CO2 emission 
 The dataset is sourced from Canada.ca.
 Datasets provide model-specific fuel consumption ratings and estimated carbon dioxide emissions for new light-duty vehicles for retail sale in Canada.
 
-## Data Understanding
+## Data Understanding and Preparation
 
 * Getting Data
 Using Wget to download the data from IBM Object Storage.
@@ -73,18 +73,63 @@ df = pd.read_csv("FuelConsumption.csv")
 df.head()
 ```
 
-## Data Preparation
-
-Descriptive Statistics Exploration 
+* Descriptive Statistics Exploration 
 
 ```
 # To summarize the data
 df.describe()
 ```
 
-Features such as Engine-Size, Cylinders, FuelConsumption_Comb and CO2 Emission are explored further.
+**Features such as Engine-Size, Cylinders, FuelConsumption_Comb and CO2 Emission are explored further.
 
 ```
 cdf = df[['ENGINESIZE','CYLINDERS','FUELCONSUMPTION_COMB','CO2EMISSIONS']]
 cdf.head(9)
 ```
+
+* Exploratory Data Analysis (EDA)
+
+```
+#Plotting for visualisation
+
+viz = cdf[['CYLINDERS','ENGINESIZE','CO2EMISSIONS','FUELCONSUMPTION_COMB']]
+viz.hist()
+plt.show()
+```
+![download](https://user-images.githubusercontent.com/93753467/148644637-99e3c45f-fc51-4e12-9e0b-e10cc839bcdd.png)
+
+
+Plotting selected features to see linearity.
+
+```
+#Cylinders vs CO2 Emission
+
+plt.scatter(cdf.CYLINDERS, cdf.CO2EMISSIONS,  color='blue')
+plt.xlabel("CYLINDERS")
+plt.ylabel("Emission")
+plt.show()
+```
+![download (1)](https://user-images.githubusercontent.com/93753467/148644649-3ad90229-986e-4ad1-8aaf-f1ec806d1b13.png)
+
+
+```
+#Fuel Consumption_Combustion vs CO2 Emission
+
+plt.scatter(cdf.FUELCONSUMPTION_COMB, cdf.CO2EMISSIONS,  color='blue')
+plt.xlabel("FUELCONSUMPTION_COMB")
+plt.ylabel("Emission")
+plt.show()
+```
+![download (2)](https://user-images.githubusercontent.com/93753467/148644668-2485d68c-d34c-4404-9613-2f4210104698.png)
+
+
+```
+#Engine Size vs CO2 Emission
+
+plt.scatter(cdf.ENGINESIZE, cdf.CO2EMISSIONS,  color='blue')
+plt.xlabel("Engine size")
+plt.ylabel("Emission")
+plt.show()
+```
+![download (3)](https://user-images.githubusercontent.com/93753467/148644729-a51588a8-a40b-4eb7-91fa-5948b7e8cca2.png)
+
