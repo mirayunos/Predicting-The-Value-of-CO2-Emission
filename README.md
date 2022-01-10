@@ -135,7 +135,7 @@ plt.show()
 
 Engine size vs CO2 Emission shows stronger positive correlation compared to the other features.
 
-#Train-Test Split Method
+* Train-Test Split Method
 
 Creating an out-of-sample testing by splitting the dataset:
 * 80% of the entire data for training
@@ -157,11 +157,11 @@ test = cdf[~msk]
 
 ## Modelling
 
-#Simple Regression Model
+* Simple Regression Model
 
 Linear Regression fits a linear model with coefficients B = (B1, ..., Bn) to minimize the 'residual sum of squares' between the independent x in the dataset, and the dependent y by the linear approximation.
 
-#Training Data Distribution
+* Training Data Distribution
 
 ```
 plt.scatter(train.ENGINESIZE, train.CO2EMISSIONS,  color='blue')
@@ -188,7 +188,7 @@ Intercept:  [124.30848132]
 
 As mentioned before, Coefficient and Intercept in the simple linear regression are the parameters of the fitted line. Given that it is a simple linear regression with only 2 parameters, and knowing that the parameters are the intercept and slope of the line, scikit-learn can estimate them directly from our data. Notice that all of the data must be available to traverse and calculate the parameters.
 
-#Plot Output
+* Plot Output
 
 Plotting fitted line over data distribution.
 
