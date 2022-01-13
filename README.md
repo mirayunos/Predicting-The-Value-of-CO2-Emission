@@ -14,7 +14,7 @@ Case Study: To find the value of CO2 emission from cars.
 
 Simple Linear Regression algorithm is used to predict the value of CO2 emission from cars.
 
-*Simple Linear Regression algorithm is a supervised machine learning algorithm to model linear relationship between to variables.*
+*Simple Linear Regression algorithm is a supervised machine learning algorithm to model linear relationship between two variables.*
 
 ## Data Requirements
 
